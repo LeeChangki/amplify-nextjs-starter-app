@@ -10,7 +10,8 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - npm install --legacy-peer-deps
+        - curl https://intoli.com/install-google-chrome.sh | bash
     build:
       commands:
         - npm run build
